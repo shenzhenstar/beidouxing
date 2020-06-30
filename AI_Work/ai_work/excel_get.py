@@ -57,7 +57,7 @@ class ExcelOps(object):
         """
         # 从配置文件获取姓名、身份证号
         name = excel_conf['name']
-        pno = excel_conf['pno']
+        # pno = excel_conf['pno']
 
         # 结束行是所有数据行数最后一行
         end_row_num=self.rows+1
@@ -67,15 +67,17 @@ class ExcelOps(object):
             # 读取姓名
             get_name = sheet[excel_conf['get_name']+str(row_num)].value
             # 读取身份证号
-            get_pno = sheet[excel_conf['get_pno']+str(row_num)].value
+            # get_pno = sheet[excel_conf['get_pno']+str(row_num)].value
             # print(get_name)
             # print(get_pno)
             # 如果读取的身份证和姓名与输入的姓名和身份证都一致，则获取打卡时间
-            if str(get_name) == name and str(get_pno) == pno:
+            # if str(get_name) == name and str(get_pno) == pno:
+            if str(get_name) == name:
                 work_up = sheet[excel_conf['get_up']+str(row_num)].value
                 work_off = sheet[excel_conf['get_off']+str(row_num)].value
                 # 把读取到的[姓名、身份证号、上班打卡时间、下班打卡时间] 打包一起返回
-                datas.append((name, pno, work_up, work_off))
+                # datas.append((name, pno, work_up, work_off))
+                datas.append((name, work_up, work_off))
             # print(len(datas))
         return datas
 

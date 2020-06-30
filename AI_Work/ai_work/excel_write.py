@@ -67,16 +67,21 @@ class WriteExcel(object):
         data_from = excel_get.ExcelOps(PATH(a_file_string))
         datas_list = data_from.read_data()
 
+
         # 遍历打卡数据
         for i in range(1,len(datas_list)+1):
             # 索引从0开始
             datas = datas_list[i-1]
-            # print(datas)
-            # 如果 上班打卡 和 下班打卡 都存在（即有上班），则继续
-            if datas[2] and datas[3] :
+            # print(datas,len(datas))
+            # 如果 上班打卡 和 下班打卡 都有一个存在（即有上班），则继续
+            """注意：datas的索引是根据获取a表数据的长度而定，如有改动，需变动datas的索引"""
+            if datas[1] or datas[2] :
                 # print(datas[2],type(datas[2]))
                 # 读取 打卡的日期    ---因为datas是元祖，datas[2]的数据是字符串，所以可以对datas[2]进行切片
-                work_date = datas[2][3:5]
+                if datas[1] :
+                    work_date = datas[1][3:5]
+                else:
+                    work_date = datas[2][3:5]
                 # print(work_date)
                 # print(work_date[0],type(work_date[0]))
                 # 如果打卡的日期是 01 - 09，则识别为 1- 9
@@ -103,13 +108,19 @@ class WriteExcel(object):
                     # 如果从打卡时间里匹配到日期，则在该行写入打卡数据,j是行
                     if str(b_excel_date) == str(daka_date):
                         # 上班打卡时间
-                        self.ws.cell(row = j, column = int(excel_conf['put_up_nu'])).value = datas[2]
+                        self.ws.cell(row = j, column = int(excel_conf['put_up_nu'])).value = datas[1]
                         # 下班打卡时间
-                        self.ws.cell(row = j, column = int(excel_conf['put_off_nu'])).value = datas[3]
+                        self.ws.cell(row = j, column = int(excel_conf['put_off_nu'])).value = datas[2]
 
                         # 如果是规定的正常上班，则输出正常上班的日志
                         if str(b_excel_worktime) == '8':
-                            print('正常上班：星期'+str(b_excel_week)+', '+str(b_excel_date)+'号')
+                            # 因为考虑到可能有上班没打卡，或者下班没打卡，所以进行分支输出日志，如果有上班或者下班其中一个没打卡，则输出提示！
+                            if not datas[1]:
+                                print('正常上班：星期'+str(b_excel_week)+', '+str(b_excel_date)+'号'+'【注意】上班没打卡数据，请注意！')
+                            if not datas[2]:
+                                print('正常上班：星期'+str(b_excel_week)+', '+str(b_excel_date)+'号'+'【注意】下班没打卡数据，请注意！')
+                            else:
+                                print('正常上班：星期'+str(b_excel_week)+', '+str(b_excel_date)+'号')
                         else:
                             # 如果不是规定的正常上班日期，则判断是否是周末加班（默认是周末加班，节假日加班需在Excel手动修改）
                             if str(b_excel_week) in '六、日':
@@ -117,10 +128,21 @@ class WriteExcel(object):
                                 self.ws.cell(row=j, column=int(excel_conf['put_weekend_s_nu'])).value = 8
                                 # 在备注一列说明加班信息
                                 self.ws.cell(row=j, column=int(excel_conf['week_bz'])).value = excel_conf['week_bz_info']
-                                print('周末加班：星期' + str(b_excel_week) + ', ' + str(b_excel_date) + '号')
+                                if not datas[1]:
+                                    print('周末加班：星期' + str(b_excel_week) + ', ' + str(b_excel_date) + '号' + '【注意】上班没打卡数据，请注意！')
+                                if not datas[2]:
+                                    print('周末加班：星期' + str(b_excel_week) + ', ' + str(b_excel_date) + '号' + '【注意】下班没打卡数据，请注意！')
+                                else:
+                                    print('周末加班：星期' + str(b_excel_week) + ', ' + str(b_excel_date) + '号')
                             else:
-                                print('打卡时间是：'+str(b_excel_date)+'号，请查看是否为节假日加班!，如果是，请手动在节假日一列输入加班时长。')
-
+                                if not datas[1]:
+                                    print('打卡时间是：'+str(b_excel_date)
+                                          +'号，请查看是否为节假日加班!，如果是，请手动在节假日一列输入加班时长。' + '【注意】上班没打卡数据，请注意！')
+                                if not datas[2]:
+                                    print('打卡时间是：'+str(b_excel_date)
+                                          +'号，请查看是否为节假日加班!，如果是，请手动在节假日一列输入加班时长。' + '【注意】下班没打卡数据，请注意！')
+                                else:
+                                    print('打卡时间是：'+str(b_excel_date)+'号，请查看是否为节假日加班!，如果是，请手动在节假日一列输入加班时长。')
 
         # 保存操作
         self.wb.save(self.file_path)
