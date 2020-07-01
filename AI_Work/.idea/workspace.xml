@@ -18,7 +18,7 @@
   <component name="ProjectId" id="1czvbyA8kqTt02quY8dScAJoaoM" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/file_data" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -27,12 +27,12 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\asus\PycharmProjects\AI_Work" />
-      <recent name="C:\Users\asus\PycharmProjects\AI_Work\file_data" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\asus\PycharmProjects\AI_Work\ai_work" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\PycharmProjects\AI_Work\file_data" />
+      <recent name="C:\Users\asus\PycharmProjects\AI_Work" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -161,8 +161,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.run" />
-        <item itemvalue="Python.excel_write" />
         <item itemvalue="Python.excel_get (1)" />
+        <item itemvalue="Python.excel_write" />
         <item itemvalue="Python.excel_get" />
         <item itemvalue="Python.find_file" />
       </list>
@@ -192,6 +192,8 @@
       <workItem from="1593437290708" duration="1506000" />
       <workItem from="1593523212164" duration="3762000" />
       <workItem from="1593530674510" duration="20000" />
+      <workItem from="1593531377745" duration="134000" />
+      <workItem from="1593604714893" duration="2247000" />
     </task>
     <servers />
   </component>
@@ -199,11 +201,11 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AI_Work$excel_get__1_.coverage" NAME="excel_get (1) Coverage Results" MODIFIED="1593526740950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ai_work" />
+    <SUITE FILE_PATH="coverage/AI_Work$excel_get__1_.coverage" NAME="excel_get (1) Coverage Results" MODIFIED="1593606516934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ai_work" />
     <SUITE FILE_PATH="coverage/AI_Work$int_get.coverage" NAME="int_get Coverage Results" MODIFIED="1593175703251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ai_work" />
     <SUITE FILE_PATH="coverage/AI_Work$excel_write.coverage" NAME="excel_write Coverage Results" MODIFIED="1593526792687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ai_work" />
     <SUITE FILE_PATH="coverage/AI_Work$find_file.coverage" NAME="find_file Coverage Results" MODIFIED="1593176565544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ai_work" />
-    <SUITE FILE_PATH="coverage/AI_Work$run.coverage" NAME="run Coverage Results" MODIFIED="1593531382730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AI_Work$run.coverage" NAME="run Coverage Results" MODIFIED="1593606558953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AI_Work$index.coverage" NAME="index Coverage Results" MODIFIED="1592845535520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AI_Work$excel_get.coverage" NAME="excel_get Coverage Results" MODIFIED="1593523963095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

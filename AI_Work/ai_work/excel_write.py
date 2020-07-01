@@ -55,10 +55,10 @@ class WriteExcel(object):
 
         # 右下角的【员工签字确认】写入,c代表行号
         for c in range(37,50):
-            b_ygqz = self.ws[excel_conf['put_weekend_s']+str(c)].value
+            b_ygqz = self.ws[excel_conf['ygqm']+str(c)].value
             if "员工签字" in str(b_ygqz):
                 # 12是代表L列，c+1代表在“员工签字确认的下一列签字”
-                self.ws.cell(row=c+1, column=int(excel_conf['put_weekend_s_nu'])).value = excel_conf['name']
+                self.ws.cell(row=c+1, column=int(excel_conf['ygqm_nu'])).value = excel_conf['name']
 
 
         # 获取打卡数据
