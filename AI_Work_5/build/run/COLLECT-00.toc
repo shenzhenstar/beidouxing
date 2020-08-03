@@ -1,6 +1,6 @@
-([('run.exe', 'D:\\ai_test\\AI_Work\\build\\run\\run.exe', 'EXECUTABLE'),
+([('run.exe', 'D:\\ai_test\\AI_Work_6\\build\\run\\run.exe', 'EXECUTABLE'),
   ('run.exe.manifest',
-   'D:\\ai_test\\AI_Work\\build\\run\\run.exe.manifest',
+   'D:\\ai_test\\AI_Work_6\\build\\run\\run.exe.manifest',
    'BINARY'),
   ('python36.dll',
    'c:\\users\\asus\\appdata\\local\\programs\\python\\python36\\python36.dll',
@@ -45,5 +45,5 @@
    'c:\\users\\asus\\appdata\\local\\programs\\python\\python36\\DLLs\\_decimal.pyd',
    'EXTENSION'),
   ('base_library.zip',
-   'D:\\ai_test\\AI_Work\\build\\run\\base_library.zip',
+   'D:\\ai_test\\AI_Work_6\\build\\run\\base_library.zip',
    'DATA')],)

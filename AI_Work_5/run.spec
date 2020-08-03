@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['run.py'],
-             pathex=['D:\\ai_test\\AI_Work'],
+             pathex=['D:\\ai_test\\AI_Work_6'],
              binaries=[],
              datas=[],
              hiddenimports=[],
