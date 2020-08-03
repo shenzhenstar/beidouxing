@@ -94,7 +94,7 @@ class WriteExcel(object):
 
 
                 # 对应日期行的列里写入打卡时间！
-                for j in range(7,37):
+                for j in range(7,40):
                     # 获取要写入表的日期
                     b_excel_date = self.ws[str(excel_conf['get_date'])+str(j)].value
                     # print(b_excel_date,type(b_excel_date))
